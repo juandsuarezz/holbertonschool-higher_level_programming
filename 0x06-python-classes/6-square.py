@@ -9,14 +9,16 @@ class Square:
     __size : size of a side of the square
     """
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """ Sets the size of the square
 
         Arguments:
             size (int): size of the side of the square
+            position (int): position of the square
         """
 
         self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -49,12 +51,12 @@ class Square:
     def position(self):
         """ get the position
 
-        Returns: The position of the square 
+        Returns: The position of the square
         """
         return self.__position
 
     @position.setter
-    def position(self):
+    def position(self, value):
         """sets the position
 
         Arguments:
@@ -86,4 +88,3 @@ class Square:
         for j in range(self.__size):
             print("".join([" " for k in range(self.__position[0])]), end="")
             print("".join(["#" for l in range(self.__size)]))
-            
