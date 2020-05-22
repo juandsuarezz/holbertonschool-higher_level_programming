@@ -4,7 +4,7 @@
 
 def say_my_name(first_name, last_name=""):
     """Function that displays the first name and last name
-    
+
     Arguments:
         first_name (str): first name
         last_name (str): last name

@@ -3,11 +3,10 @@
 
 
 def text_indentation(text):
-    """This function splits a string of text according to punctuation
-    Args:
+    """function that splits a string of text
+
+    Arguments:
         text (str): the string of text to split
-    Raises:
-        TypeError: if the text called with the program is not a string
     """
 
     if type(text) != str:

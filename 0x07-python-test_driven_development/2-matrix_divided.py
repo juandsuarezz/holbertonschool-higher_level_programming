@@ -4,7 +4,7 @@
 
 def matrix_divided(matrix, div):
     """Function that divides the elements of a matrix by an int or float
-    
+
     Arguments:
         matrix (list): matrix to divide
         div (int or float): number to divide the matrix
