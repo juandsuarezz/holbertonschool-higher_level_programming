@@ -1,0 +1,75 @@
+================
+0-add_integer.py
+================
+
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+	>>> module_doc = __import__("0-add_integer").__doc__
+	>>> print(len(module_doc) > 0)
+	True
+
+	>>> func_doc = __import__("0-add_integer").add_integer.__doc__
+	>>> print(len(func_doc) > 0)
+	True
+
+	>>> add_integer(1, 2)
+	3
+
+	>>> add_integer(100, 98)
+	198
+
+	>>> add_integer(2)
+	100
+
+	>>> add_integer(2147483647, 0)
+	2147483647
+
+	>>> add_integer(-2147483648, 0)
+	-2147483648
+
+	>>> add_integer(2147483647, -2147483647)
+	0
+
+	>>> add_integer(-2147483648, 2147483647)
+	-1
+
+	>>> add_integer(10, -5)
+	5
+
+	>>> add_integer(-5, 10)
+	5
+
+	>>> add_integer(-5, -5)
+	-10
+
+        >>> add_integer(100, -2)
+	98
+
+	>>> add_integer(100.3, -2)
+	98
+
+	>>> add_integer(100.3, 100.3)
+	200
+
+	>>> add_integer(100.32, 100.32)
+	200
+
+	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer("School", 4)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer("Holberton", "School")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer([1, 2, 3], 4)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer((1, 2, 3), 4)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
