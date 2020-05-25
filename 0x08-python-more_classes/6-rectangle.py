@@ -1,18 +1,18 @@
 #!/usr/bin/python3
-"""Documentation of a Rectangle class"""
+"""Documentation of a rectangle class"""
 
 
 class Rectangle:
-    """Class of a rectangle"""
+    """Class of a Rectangle"""
 
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
-        """Instance of a rectangle
+        """Instantiation of a rectangle
 
         Arguments:
-            width (int): width of rectangle
-            height (int): height of rectangle
+            width (int): the width of the rectangle
+            height (int): the height of the rectangle
         """
 
         if type(width) is not int:
@@ -26,6 +26,7 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
         self.__height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -38,7 +39,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Set the width of the instance
+        """Sets the width of the instance
 
         Arguments:
             value (int): the width of the instance
@@ -80,6 +81,7 @@ class Rectangle:
 
     def perimeter(self):
         """Returns the perimeter of the instance"""
+
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * self.__height + 2 * self.__width
