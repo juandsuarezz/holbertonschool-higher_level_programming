@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """Class of a Rectangle"""
+    """Class for a Rectangle"""
 
     print_symbol = "#"
     number_of_instances = 0
@@ -95,7 +95,7 @@ class Rectangle:
         rectangle = []
         for i in range(self.__height):
             for j in range(self.__width):
-                rectangle.append('#')
+                rectangle.append(str(self.print_symbol))
             if i is not self.__height - 1:
                 rectangle.append('\n')
         return''.join(rectangle)
