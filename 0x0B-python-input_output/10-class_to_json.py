@@ -7,7 +7,7 @@ def class_to_json(obj):
 
     Arguments:
         obj (class object): the object to be serialized
-    
+
     Returns:
         dictionary representation of an object
     """
